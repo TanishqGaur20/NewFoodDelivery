@@ -40,7 +40,7 @@ const AddItem = () => {
         console.log('Form Data:', formData);
 
         try {
-            await fetch('http://localhost:5000/addNewMenuItem', {
+            await fetch(import.meta.env.VITE_API_URL + 'addNewMenuItem', {
                 method: 'post',
                 headers: { "Content-Type": 'application/json' }, body: JSON.stringify({ formData })
             })

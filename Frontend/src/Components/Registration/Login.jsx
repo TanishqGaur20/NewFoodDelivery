@@ -20,7 +20,7 @@ function Login() {
     async function handlesubmit(e) {
 
         try {
-            const res = await fetch('http://localhost:5000/login', {
+            const res = await fetch(import.meta.env.VITE_API_URL + 'login', {
                 headers: {
                     'Content-Type': 'application/json'
                 },

@@ -7,7 +7,7 @@ function Home() {
     const [searchItem, setsearchItem] = useState('');
 
     async function getData() {
-        const res = await fetch('http://localhost:5000/', {
+        const res = await fetch(import.meta.env.VITE_API_URL, {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'

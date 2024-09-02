@@ -17,7 +17,7 @@ function OrderStatus() {
         setemail(Email);
 
         async function getData() {
-            let res = await fetch('http://localhost:5000/getFeedbackDataforUser', {
+            let res = await fetch(import.meta.env.VITE_API_URL + 'getFeedbackDataforUser', {
                 method: 'get',
                 headers: {
                     "Content-Type": 'application/json'

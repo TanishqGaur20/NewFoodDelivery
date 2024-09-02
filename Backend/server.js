@@ -3,9 +3,10 @@ const app = express();
 const db = require('./DataBase/DbConnect')
 const Router = require('./Routes')
 var cors = require('cors')
+require('dotenv').config();
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: process.env.CLIENT_URL,
     optionsSuccessStatus: 200
 };
 

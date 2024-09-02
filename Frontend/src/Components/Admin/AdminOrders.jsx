@@ -11,7 +11,7 @@ const AdminOrders = () => {
         async function getOrderData() {
             try {
                 // Fetch order data
-                let res = await fetch('http://localhost:5000/adminOrders', {
+                let res = await fetch(import.meta.env.VITE_API_URL + 'adminOrders', {
                     headers: {
                         'Content-Type': 'application/json'
                     },
@@ -51,7 +51,7 @@ const AdminOrders = () => {
 
     async function sendFeedToBackend() {
         try {
-            const res = await fetch('http://localhost:5000/feedbackData', {
+            const res = await fetch(import.meta.env.VITE_API_URL + 'feedbackData', {
                 headers: {
                     'Content-Type': 'application/json'
                 },
